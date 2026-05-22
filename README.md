@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Legal Hero Section — Next.js
 
 A pixel-faithful recreation of the "Legal Work Platform" hero section built with **Next.js 14 App Router**, **Tailwind CSS**, and **Framer Motion**.
