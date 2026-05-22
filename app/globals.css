@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #EEEEF5;
+  --text-primary: #2D2B3D;
+  --text-secondary: #6B6B8A;
+  --blue: #3B47F0;
+  --orange: #E07B2A;
+  --dark: #2D2B3D;
+  --lavender: #BFC3F0;
+}
+
+.dark {
+  --bg: #12111E;
+  --text-primary: #E8E8F4;
+  --text-secondary: #9090B0;
+  --lavender: #2A2940;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-primary);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.blob {
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.55;
+  position: absolute;
+  pointer-events: none;
+}
+
+.dark .blob {
+  opacity: 0.2;
+}
+
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0px) rotate(var(--rot)); }
+  50% { transform: translateY(-14px) rotate(var(--rot)); }
+}
+
+@keyframes floatCardReverse {
+  0%, 100% { transform: translateY(0px) rotate(var(--rot)); }
+  50% { transform: translateY(10px) rotate(var(--rot)); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.animate-fade-in-right {
+  animation: fadeInRight 0.8s ease forwards;
+}
